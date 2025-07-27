@@ -260,9 +260,12 @@
 .dialog[open] {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 28px;
   gap: 30px;
+  max-width: calc(100% - 2em - 2px);
   inline-size: clamp(341px, 336.775px + 1.127vw, 353px);
+  border: 2px solid black;
 }
 
 .dialog[open]::backdrop {
@@ -277,7 +280,7 @@
 
 .dialog_save_icon {
   max-inline-size: 39px;
-}
+} 
 
 .dialog_text {
   font-family: var(--accent-font), Arial, sans-serif;
@@ -285,7 +288,6 @@
   font-weight: 400;
   text-transform: uppercase;
   line-height: 150%;
-  padding-right: 10px;
 }
 
 .dialog_button {
@@ -294,7 +296,7 @@
   color: #fff;
   background-color: #fff;
   cursor: pointer;
-  min-inline-size: clamp(261px, 250.437px + 2.817vw, 291px);
+  width: 100%;
   block-size: 38px;
 }
 
@@ -313,5 +315,9 @@
   .button_save_icon {
     inline-size: 28px;
     block-size: 28px;
+  }
+
+  .dialog[open] {
+    padding: 28px 38px;
   }
 }
